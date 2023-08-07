@@ -1,0 +1,26 @@
+<h2>Home</h2>
+{{ myString | uppercase }}
+{{ myString | double }}
+
+<hr>
+<h3>
+    one-way binding
+</h3>
+
+<h1>{{ name }}</h1>
+
+<input type="text" [value]="name" (change)="getChange($event)"/> <button (click)="applyChange()">Apply Change</button>
+
+
+
+<hr>
+<h3>
+    two-way binding
+</h3>
+
+<h1>{{ message }}</h1>
+
+<input type="text" [(ngModel)]="message" />
+  
+
+<router-outlet></router-outlet>

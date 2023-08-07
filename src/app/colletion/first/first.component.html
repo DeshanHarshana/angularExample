@@ -1,0 +1,25 @@
+<p>first works!</p>
+
+<button (click)="goToSecond()">Get API</button>
+
+<button (click)="getList()">Get List</button>
+
+<div *ngIf="shortList.length > 0">
+    <ul>
+      <li *ngFor="let entry of shortList">
+        <h3>{{ entry.API }}</h3>
+        <p>Description: {{ entry.Description }}</p>
+        <p>Auth: {{ entry.Auth }}</p>
+        <p>HTTPS: {{ entry.HTTPS ? 'Yes' : 'No' }}</p>
+        <p>Cors: {{ entry.Cors }}</p>
+        <p>Link: <a href="{{ entry.Link }}" target="_blank">{{ entry.Link }}</a></p>
+        <p>Category: {{ entry.Category }}</p>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="shortList.length === 0">
+    <p>No entries found.</p>
+  </div>
+  
+
